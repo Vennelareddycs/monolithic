@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "one" {
-  bucket = "devops.project.bucket"
+  bucket = "project.bucket"
 }
 
 resource "aws_s3_bucket_ownership_controls" "two" {
@@ -23,10 +23,5 @@ status = "Enabled"
 }
 }
 
-terraform {
-backend "s3" {
-region = "us-east-1"
-bucket = "devops.project.bucket"
-key = "prod/terraform.tfstate"
-}
+
 }
