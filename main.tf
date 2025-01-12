@@ -9,7 +9,7 @@ resource "aws_launch_template" "web_server_as" {
 
 
   resource "aws_elb" "web_server_lb"{
-     name = "web-server-lb"
+     name = "web-server-lb-2408"
      security_groups = [aws_security_group.web_server.id]
      subnets = ["subnet-00bc90cea0de33da3", "subnet-0b5bd8d29282e7944"]
      listener {
